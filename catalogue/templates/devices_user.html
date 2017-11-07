@@ -1,0 +1,39 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="content">
+  {% load readmore %}
+    {% if user.is_authenticated %}
+    <button id="devicebutton"><a href="{% url 'new-device' %}">Add device</a></button>
+    <div id="blankspace"></div>
+    {% endif %}
+    {% if userdevices %}
+      {% for copy in userdevices %}
+      <table>
+        <tr>
+          <td class="tablelabel">Equipment</td>
+          <td class="tablecontent">{{ copy.equipment }}</td>
+        </tr>
+        <tr> 
+          <td class="tablelabel">Description</td>
+          <td class="tablecontent">{{ copy.description|readmore:50 }}</td>
+        </tr>
+        <tr> 
+          <td class="tablelabel">Location</td>
+          <td class="tablecontent">{{ copy.location }}</td>
+        </tr>
+        <tr> 
+          <td class="tablelabel">Email</td>
+          <td class="tablecontent">{{ copy.email }}</td>
+        </tr>
+        <tr> 
+          <td><strong>Click to delete entry:</strong></td>
+          <td><button id="deletebutton"><a href="/catalogue/delete/{{ copy.id }}" onclick="return confirm('Are you sure you want to delete this entry?')">Delete</a></button></td>
+        </tr>
+      </table>
+      {% endfor %}
+    {% else %}
+      <p>Nothing to see here.</p>
+    {% endif %}
+</div>
+{% endblock %}

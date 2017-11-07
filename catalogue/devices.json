@@ -1,0 +1,44 @@
+[
+  {
+	"equipment" : "Type of equipment, make, model, etc.",
+	"description" : "A few sentences describing equipment in more detail.",
+	"location" : "Lab/university address",
+	"email" : "dick.head@nuigalway.ie"
+  },
+  {
+	"equipment" : "High-speed digital camera",
+	"description" : "10,000 fps digital camera suitable for PIV applications",
+	"location" : "Most Famous University, Dong Province, China",
+	"email" : "sucking.wang@notgmail.com"
+  },
+  {
+	"equipment" : "Le flat-flame burner",
+	"description" : "Eet can burn many theengs. C'est spectaculaire!",
+	"location" : "Centre Nationale de la Rapide Shit, France",
+	"email" : "monsieur.flambe@le-gmail.fr"
+  },
+  {
+	"equipment" : "Rapid depression machine",
+	"description" : "Destroyer of souls",
+	"location" : "Not far away enough",
+	"email" : "poor.bastard@nuigalway.ie"
+  },
+  {
+	"equipment" : "Rapid shock compression tube machine",
+	"description" : "Many tubes, much compression",
+	"location" : "The future",
+	"email" : "yu.hu@nuigalway.ie"
+  },
+  {
+	"equipment" : "Low-pressure speciation shock tube",
+	"description" : "Capable of performing miracles",
+	"location" : "Imagination land",
+	"email" : "yu.hu@nuigalway.ie"
+  },
+  {
+	"equipment" : "Quantum matrix super-laser",
+	"description" : "So powerful you could draw a dick on the moon with it.",
+	"location" : "Underground lair, Secret location",
+	"email" : "dr.zap@nowhere.com"
+  }
+]

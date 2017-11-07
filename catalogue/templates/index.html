@@ -1,0 +1,49 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="content">
+  {% load readmore %}
+    <form action="" method="GET">
+      <input type="text" name="q" value="{{ request.GET.q }}" placeholder="Search the site..." id="searchbar"/>
+      <input type="submit" value="Search" />
+    </form>
+    {% if user.is_authenticated %}
+      <button id="devicebutton"><a href="{% url 'new-device' %}">Add device</a></button>
+    {% endif %}
+    {% if devices_list %}
+      {% for copy in devices_list %}
+      <table>
+        <tr>
+          <td class="tablelabel">Equipment</td>
+          <td class="tablecontent">{{ copy.equipment }}</td>
+        </tr>
+        <tr> 
+          <td class="tablelabel">Description</td>
+          <td class="tablecontent">{{ copy.description|readmore:50 }}</td>
+        </tr>
+        <tr> 
+          <td class="tablelabel">Location</td>
+          <td class="tablecontent">{{ copy.location }}</td>
+        </tr>
+        <tr> 
+          <td class="tablelabel">Email</td>
+          <td class="tablecontent">{{ copy.email }}</td>
+        </tr>
+      </table>
+      {% endfor %}
+      <div>
+        {% if devices_list.has_previous %}
+          <a href="?page={{ devices_list.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
+        {% endif %}
+
+        Page {{ devices_list.number }} of {{ devices_list.paginator.num_pages }}
+
+        {% if devices_list.has_next %}
+          <a href="?page={{ devices_list.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
+        {% endif %}
+      </div>
+    {% else %}
+      <p>No results to display</p>
+    {% endif %}
+</div>
+{% endblock %}

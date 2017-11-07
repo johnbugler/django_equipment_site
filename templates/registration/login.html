@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="content">
+  <h2>Login</h2>
+  <form method="post" action="{% url 'login' %}" novalidate>
+  {% csrf_token %}
+  
+  <p>
+    {{ form.username.label_tag }}<br>
+    {{ form.username }}
+  </p>
+  <p>
+    {{ form.password.label_tag }}<br>
+    {{ form.password }}
+    {% if form.errors %}
+    <small style="color: red">Your username and password didn't match. Please try again.</small>
+    {% endif %}
+  </p>
+  
+  <div>
+    <input type="submit" value="Login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </div>
+  </form>
+  
+  <p><a href="{% url 'password_reset' %}">Forgot your password?</a></p>
+  <p>Not signed up? Click <a href="{% url 'signup' %}">here</a></p>
+  
+</div>
+{% endblock %}

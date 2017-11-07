@@ -1,0 +1,88 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+header {
+    background-image: linear-gradient(#4e69a2, #3b5998 50%);
+    border-bottom: 1px solid #133783;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+#sidebar {
+    width: 20%;
+    float: left;
+    border-right: 1px solid #dddfe2;
+    font-size: 18px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.content {
+    width: 78%;
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: #365899;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#searchbar {
+    margin-left: 35%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#devicebutton {
+    position: absolute;
+    top: 140px;
+    right: 50px;
+}
+
+#devicebutton a {
+    text-decoration: none;
+}
+
+#deletebutton {
+    margin-left: 40%;
+}
+
+#deletebutton a {
+    text-decoration: none;
+}
+
+table {
+    border: 2px groove gray;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px black;
+    margin-left: 20%;
+    margin-bottom: 10px;
+}
+
+td {
+    border: 1px solid black;
+    border-radius: 1px;
+}
+
+.tablelabel {
+    width: 150px;
+}
+
+.tablecontent {
+    width: 400px;
+}
+
+#blankspace {
+    margin: 55px;
+}
