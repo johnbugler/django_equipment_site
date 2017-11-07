@@ -12,10 +12,10 @@ class Device(models.Model):
 
     researcher = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 
-    creation_date = models.DateTimeField(auto_now_add = True, editable=False)
-
-    class Meta:
-        ordering = ["-creation_date"]
+#    creation_date = models.DateTimeField(auto_now_add = True, editable=False)
+#
+#    class Meta:
+#        ordering = ["-creation_date"]
 
     def __str__(self):
         """
