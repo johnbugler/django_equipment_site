@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '2+*tl0xf!zgto$=sq7oir0=684^2!%
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysterious-scrubland-63561.herokuapp.com','127.0.0.1']
 
 
 # Application definition
