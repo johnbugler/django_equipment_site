@@ -24,23 +24,23 @@ def index(request):
             Q(email__icontains=query)
         )
 
-    paginator = Paginator(devices_list, 3)
-
-    page = request.GET.get('page')
-    try:
-        devices = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        devices = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        devices = paginator.page(paginator.num_pages)
+#    paginator = Paginator(devices_list, 3)
+#
+#    page = request.GET.get('page')
+#    try:
+#        devices = paginator.page(page)
+#    except PageNotAnInteger:
+#        # If page is not an integer, deliver first page.
+#        devices = paginator.page(1)
+#    except EmptyPage:
+#        # If page is out of range (e.g. 9999), deliver last page of results.
+#        devices = paginator.page(paginator.num_pages)
 
     # Render the HTML template index.html with the data in the context variable
     return render(
         request,
         'index.html',
-        context={'devices_list':devices},
+        context={'devices_list':devices_list},
     )
 
 def ads(request):

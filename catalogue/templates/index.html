@@ -31,7 +31,7 @@
         </tr>
       </table>
       {% endfor %}
-      <div>
+<!--      <div>
         {% if devices_list.has_previous %}
           <a href="?page={{ devices_list.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
         {% endif %}
@@ -41,7 +41,7 @@
         {% if devices_list.has_next %}
           <a href="?page={{ devices_list.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
         {% endif %}
-      </div>
+      </div> -->
     {% else %}
       <p>No results to display</p>
     {% endif %}
